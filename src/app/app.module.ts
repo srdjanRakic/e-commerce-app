@@ -2,7 +2,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { environment } from './../environments/environment';
+
+// Modules
 import { AppRoutingModule } from './app-routing.module';
+
+// NG Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Firebase
 import { AngularFireModule } from 'angularfire2';
@@ -41,7 +46,8 @@ import { LoginComponent } from './login/login.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
